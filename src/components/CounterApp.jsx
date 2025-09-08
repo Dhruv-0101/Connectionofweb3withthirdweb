@@ -16,8 +16,27 @@ const CONTRACTS = {
 const abi = [
   {
     inputs: [],
+    name: "count",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "getCount",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -88,7 +107,9 @@ export default function CounterApp() {
 
       <p className="text-lg">
         Current Count:{" "}
-        <span className="font-mono">{count !== undefined ? count.toString() : "..."}</span>
+        <span className="font-mono">
+          {count !== undefined ? count.toString() : "..."}
+        </span>
       </p>
 
       <button
