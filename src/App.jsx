@@ -1,13 +1,11 @@
+import WalletConnect from "./components/WalletConnect";
 import CounterApp from "./components/CounterApp";
-import Example from "./components/Example";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Example />
+    <div className="p-6 space-y-6">
+      <WalletConnect />
       <CounterApp />
     </div>
   );
 }
-
-export default App;
